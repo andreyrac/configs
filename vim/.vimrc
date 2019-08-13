@@ -4,26 +4,32 @@ set nocompatible
 " syntax highlighting and colouring
 syntax on
 
-" tabs the way I want them
-set tabstop=2
+" indentation without hard tabs ... making actual tabs less than 8 (tabstop)
+set tabstop=4
 set softtabstop=2
-set expandtab
 set shiftwidth=2
 
-" not sure if this works (adjust indentation properties as needed)
-filetype plugin indent on
+" immediately expand tabs to use spaces
+set expandtab
 
-" not sure if this works (folds code?)
+" disable folding
 set foldenable
 
-" informational
+" show current line number
 set number
+
+" alwas show command line
 set showcmd
 
-" current line
+" highlighting current line
 set cursorline
 :hi CursorLine cterm=NONE ctermbg=black
 
-" tabbing
+" ctrl+l opens a new tab in explore
 nnoremap <C-l> :tabe %:h<CR>
+
+" ctrl+k uses current tab to explore
 nnoremap <C-k> :ex %:h<CR>
+
+" Capital 'W' command now writes in root mode
+command W :execute ':silent w !sudo tee % >/dev/null' | :edit!
