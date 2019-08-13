@@ -24,13 +24,6 @@ set showcmd
 set cursorline
 :hi CursorLine cterm=NONE ctermbg=black
 
-" plugins
-call plug#begin('~/.vim/plugged')
-Plug '~/.vim/vimplugs/git-blame.vim'
-call plug#end()
-
 " tabbing
-nnoremap <C-Left> :tabprevious<CR>                                                                    
-nnoremap <C-Right> :tabnext<CR>
-nnoremap <C-n> :tabe %:h<CR>
-
+nnoremap <C-l> :tabe %:h<CR>
+nnoremap <C-k> :ex %:h<CR>
