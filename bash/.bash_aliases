@@ -14,8 +14,7 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias ll='ls -AlF'
-alias l='ls -CF'
+alias l='ls -lAF'
 
 # enable tabbing for vim by default
 alias vim='vim -p'
